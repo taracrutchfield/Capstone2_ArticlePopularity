@@ -139,6 +139,11 @@ def main(urls):
     loop.run_until_complete(future)
 
 #-- Script ----------------------------------------------------------------------------------------------------------------------------------------
+urls = pd.read_csv('Data/OnlineNewsPopularity.csv')['url']
+save_path = 'Data/Raw.csv'
+
+# empty dict for article entries
+data = dict()
 # empty list for all collected urls
 urls_collected = []
 
